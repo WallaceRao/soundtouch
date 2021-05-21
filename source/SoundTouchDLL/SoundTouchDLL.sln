@@ -23,6 +23,6 @@ Global
 		{68A5DD20-7057-448B-8FE0-B6AC8D205509}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		HideSolutionNode = false
 	EndGlobalSection
 EndGlobal

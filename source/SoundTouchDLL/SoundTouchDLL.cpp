@@ -41,7 +41,7 @@
 
 using namespace soundtouch;
 
-BOOL APIENTRY DllMain( HANDLE hModule, 
+bool APIENTRY DllMain( HANDLE hModule, 
                        DWORD  ul_reason_for_call, 
                        LPVOID lpReserved
 					 )
@@ -54,7 +54,7 @@ BOOL APIENTRY DllMain( HANDLE hModule,
 	case DLL_PROCESS_DETACH:
 		break;
 	}
-    return TRUE;
+    return true;
 }
 
 
@@ -258,14 +258,14 @@ SOUNDTOUCHDLL_API void __stdcall soundtouch_clear(HANDLE h)
 /// Changes a setting controlling the processing system behaviour. See the
 /// 'SETTING_...' defines for available setting ID's.
 /// 
-/// \return 'TRUE' if the setting was succesfully changed
-SOUNDTOUCHDLL_API BOOL __stdcall soundtouch_setSetting(HANDLE h, 
+/// \return 'true' if the setting was succesfully changed
+SOUNDTOUCHDLL_API bool __stdcall soundtouch_setSetting(HANDLE h, 
                 int settingId,   ///< Setting ID number. see SETTING_... defines.
                 int value        ///< New setting value.
                 )
 {
     STHANDLE *sth = (STHANDLE*)h;
-    if (sth->dwMagic != STMAGIC) return FALSE;
+    if (sth->dwMagic != STMAGIC) return false;
 
     return sth->pst->setSetting(settingId, value);
 }

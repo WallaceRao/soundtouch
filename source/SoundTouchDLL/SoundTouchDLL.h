@@ -126,8 +126,8 @@ SOUNDTOUCHDLL_API void __stdcall soundtouch_clear(HANDLE h);
 /// Changes a setting controlling the processing system behaviour. See the
 /// 'SETTING_...' defines for available setting ID's.
 /// 
-/// \return 'TRUE' if the setting was succesfully changed
-SOUNDTOUCHDLL_API BOOL __stdcall soundtouch_setSetting(HANDLE h, 
+/// \return 'true' if the setting was succesfully changed
+SOUNDTOUCHDLL_API bool __stdcall soundtouch_setSetting(HANDLE h, 
                 int settingId,   ///< Setting ID number. see SETTING_... defines.
                 int value        ///< New setting value.
                 );
